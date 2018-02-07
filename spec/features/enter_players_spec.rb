@@ -7,10 +7,7 @@ feature "name input" do
   end
 
   scenario "player 1 and 2's names are displayed" do
-    visit('/')
-    fill_in 'Player1', with: 'July'
-    fill_in 'Player2', with: 'Jill'
-    click_button 'Submit'
+    sign_in_and_play
     expect(page).to have_content("Welcome July and Jill")
   end
 end
