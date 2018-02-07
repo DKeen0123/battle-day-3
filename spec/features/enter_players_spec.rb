@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 feature "name input" do
 
   scenario "has a form" do
@@ -8,7 +6,7 @@ feature "name input" do
     expect(page).to have_selector("form")
   end
 
-  scenario "player 1's name is displayed" do
+  scenario "player 1 and 2's names are displayed" do
     visit('/')
     fill_in 'Player1', with: 'July'
     fill_in 'Player2', with: 'Jill'
