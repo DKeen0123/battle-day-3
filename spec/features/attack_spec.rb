@@ -9,6 +9,7 @@ feature "Attack player 2" do
   scenario "Reduces Jill\'s HP by 10" do
     sign_in_and_play
     click_button "attack"
+    expect(page).not_to have_content "Jill's HP: 100"
     expect(page).to have_content "Jill's HP: 90"
   end
 
