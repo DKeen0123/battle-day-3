@@ -14,12 +14,10 @@ describe Player do
     end
   end
 
-  describe "#attack" do
+  describe "#receive_damage" do
     it "reduces a player's HP by 10" do
-      player2 = Player.new(:pikachu)
-      expect{ player.attack(player2) }.to change { player2.hp }.by(-10)
+      expect{player.receive_damage}.to change{ player.hp }.by(-10)
     end
   end
-
 
 end
