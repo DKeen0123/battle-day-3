@@ -2,7 +2,7 @@ feature "name input" do
 
   scenario "has a form" do
     visit('/')
-    expect(page).to have_field(:Player1)
+    expect(page).to have_field(:player1)
     expect(page).to have_selector("form")
   end
 
